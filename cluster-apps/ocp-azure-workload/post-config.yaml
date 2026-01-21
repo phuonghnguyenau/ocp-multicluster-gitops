@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: workload-cluster-post-config
+  name: appset-ocp-azure-workload-post-config
   namespace: openshift-gitops
 spec:
   goTemplate: true
@@ -22,7 +22,7 @@ spec:
       source:
         repoURL: https://github.com/phuonghnguyenau/ocp-multicluster-gitops.git
         targetRevision: main
-        path: 'post-config/{{.name}}/overlays/workload/'
+        path: 'post-config/{{.name}}/overlays/ocp-azure-workload/'
       destination:
         server: https://kubernetes.default.svc
       syncPolicy:
