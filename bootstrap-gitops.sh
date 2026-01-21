@@ -11,6 +11,14 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
+# is there a kubeconfig environment variable as well?
+if [[ -z "$KUBECONFIG" ]]; then
+    echo "Missing KUBECONFIG environment variable"
+    exit 1
+else
+    echo "KUBECONFIG=$KUBECONFIG"
+fi
+
 CLUSTER=$1
 
 echo "Use kustomize to intialise OpenShift GitOps operator onto cluster..."
