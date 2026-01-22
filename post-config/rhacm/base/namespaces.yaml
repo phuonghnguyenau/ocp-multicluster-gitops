@@ -1,10 +1,16 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: rhacm-policies
+  name: open-cluster-management
 spec:
   finalizers:
   - kubernetes
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rhacm-policies
+spec: {}
 ---
 apiVersion: v1
 kind: Namespace
