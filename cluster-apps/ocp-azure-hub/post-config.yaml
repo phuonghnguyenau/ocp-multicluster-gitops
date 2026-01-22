@@ -21,7 +21,7 @@ spec:
       project: "default"
       source:
         repoURL: https://github.com/phuonghnguyenau/ocp-multicluster-gitops.git
-        targetRevision: dev
+        targetRevision: main
         path: 'post-config/{{.name}}/overlays/ocp-azure-hub/'
       destination:
         server: https://kubernetes.default.svc
