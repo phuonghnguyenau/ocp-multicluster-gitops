@@ -1,0 +1,7 @@
+- path: /spec/nodeSelector
+  op: remove
+
+- op: replace
+  path: /spec/enableClusterBackup
+  value: true
+  
