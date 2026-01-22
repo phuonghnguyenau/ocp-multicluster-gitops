@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - cluster-logging-operator-og.yaml
   - cluster-logging-operator-sub.yaml
+  - namespace.yaml
