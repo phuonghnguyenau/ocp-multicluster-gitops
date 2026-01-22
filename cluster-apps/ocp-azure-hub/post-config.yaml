@@ -10,6 +10,8 @@ spec:
   - list:
       elements:
       - name: gitops-operator
+      - name: cluster-config
+      - name: auth
   template:
     metadata:
       name: '{{.name}}'

@@ -1,4 +1,4 @@
 ---
 - op: "replace"
   path: "/spec/text"
-  value: "Workload OpenShift Cluster"
+  value: "Azure Workload OpenShift Cluster"
