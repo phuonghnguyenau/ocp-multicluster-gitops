@@ -13,6 +13,7 @@ spec:
       - name: cluster-config
       - name: auth
       - name: rhacm
+      - name: logging-operator
   template:
     metadata:
       name: '{{.name}}'

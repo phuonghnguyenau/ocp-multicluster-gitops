@@ -4,9 +4,7 @@ metadata:
   name: open-cluster-management
   annotations:
     argocd.argoproj.io/sync-wave: '-1'
-spec:
-  finalizers:
-  - kubernetes
+spec: {}
 ---
 apiVersion: v1
 kind: Namespace
