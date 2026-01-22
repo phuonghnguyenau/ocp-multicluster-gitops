@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: appset-ocp-azure-hub-post-config
+  namespace: openshift-gitops
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+  - list:
+      elements:
+      - name: gitops-operator
+      - name: cluster-config
+      - name: auth
+      - name: rhacm
+      - name: logging-operator
+  template:
+    metadata:
+      name: '{{.name}}'
+    spec:
+      project: "default"
+      source:
+        repoURL: https://github.com/phuonghnguyenau/ocp-multicluster-gitops.git
+        targetRevision: main
+        path: 'post-config/{{.name}}/overlays/ocp-azure-hub/'
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated: {}
+        syncOptions:
+        - CreateNamespace=true
