@@ -1,0 +1,30 @@
+apiVersion: operator.tekton.dev/v1alpha1
+kind: TektonConfig
+metadata:
+  name: config
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: '1'
+spec:
+  pipeline:
+    running-in-environment-with-injected-sidecars: true
+    metrics.taskrun.duration-type: histogram
+    metrics.pipelinerun.duration-type: histogram
+    await-sidecar-readiness: true
+    params:
+      - name: enableMetrics
+        value: 'false'
+    default-service-account: pipeline
+    require-git-ssh-secret-known-hosts: false
+    enable-tekton-oci-bundles: false
+    metrics.taskrun.level: task
+    metrics.pipelinerun.level: pipeline
+    enable-api-fields: stable
+    enable-provenance-in-status: false
+    enable-custom-tasks: true
+    disable-creds-init: false
+    disable-affinity-assistant: true
+  hub:
+    params:
+      - name: enable-devconsole-integration
+        value: false

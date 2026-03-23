@@ -14,6 +14,7 @@ spec:
       - name: auth
       - name: rhacm
       - name: logging-operator
+      - name: pipelines-operator
   template:
     metadata:
       name: '{{.name}}'
