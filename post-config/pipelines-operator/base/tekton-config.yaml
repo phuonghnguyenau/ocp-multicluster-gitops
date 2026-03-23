@@ -24,7 +24,3 @@ spec:
     enable-custom-tasks: true
     disable-creds-init: false
     disable-affinity-assistant: true
-  hub:
-    params:
-      - name: enable-devconsole-integration
-        value: 'false'
