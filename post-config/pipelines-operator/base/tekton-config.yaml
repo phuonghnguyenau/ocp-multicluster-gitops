@@ -27,4 +27,4 @@ spec:
   hub:
     params:
       - name: enable-devconsole-integration
-        value: false
+        value: 'false'
