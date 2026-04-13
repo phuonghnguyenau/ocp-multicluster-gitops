@@ -1,0 +1,21 @@
+apiVersion: platform.stackrox.io/v1alpha1
+kind: Central
+metadata:
+  name: central-ocp-azure-hub
+  namespace: stackrox
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: '1'
+spec:
+  configAsCode:
+    configAsCodeComponent: Enabled
+  central:
+    exposure:
+      route:
+        enabled: true
+  egress:
+    connectivityPolicy: Online
+  scannerV4:
+    scannerComponent: Enabled
+  scanner:
+    scannerComponent: Disabled
