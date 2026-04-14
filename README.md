@@ -16,6 +16,8 @@ In turn, each subdirectory in the `post-config` directory contains the following
 * `logging-operator` - cluster logging
 * `oadp-operator` - OpenShift Application Data Protection operator components
 * `rhacm` - Red Hat Advanced Cluster Management for Kubernetes (RHACM), installed on an OpenShift Hub/Management cluster
+* `rhacs` - Red Hat Advanced Cluster Security for Kubernetes (RHACS), installed on an OpenShift Hub/Management cluster
+* `rhacs-secured-cluster` - Adds integration from the cluster to RHACS
 
 ## Scripts
 * `bootstrap-gitops.sh` - a simple method of initialising Argo CD/OpenShift GitOps onto an OpenShift cluster, as long as the cluster's overlay has been defined and cluster app exists
