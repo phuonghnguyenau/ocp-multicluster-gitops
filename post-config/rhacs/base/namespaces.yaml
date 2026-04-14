@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: stackrox
+  annotations:
+    argocd.argoproj.io/sync-wave: '-1'
+spec: {}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rhacs-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: '-1'
+spec: {}

@@ -13,6 +13,8 @@ spec:
       - name: cluster-config
       - name: auth
       - name: rhacm
+      - name: rhacs
+      - name: rhacs-secured-cluster
       - name: logging-operator
       - name: pipelines-operator
   template:
