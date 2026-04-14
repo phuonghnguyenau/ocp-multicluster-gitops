@@ -12,6 +12,5 @@ spec:
     targetRevision: main
   project: default
   syncPolicy:
-    automated: {}
     syncOptions:
       - CreateNamespace=true
