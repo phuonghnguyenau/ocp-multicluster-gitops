@@ -1,0 +1,4 @@
+---
+- op: "replace"
+  path: "/spec/clusterName"
+  value: "ocp-azure-hub"
