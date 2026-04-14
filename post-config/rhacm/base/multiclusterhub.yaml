@@ -8,7 +8,6 @@ metadata:
     argocd.argoproj.io/sync-wave: '1'
 spec:
   availabilityConfig: High
-  enableClusterBackup: false
   ingress:
     sslCiphers:
       - ECDHE-ECDSA-AES256-GCM-SHA384
