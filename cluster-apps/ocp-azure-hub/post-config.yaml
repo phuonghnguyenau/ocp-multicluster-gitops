@@ -16,7 +16,7 @@ spec:
       - name: rhacs
       - name: rhacs-secured-cluster
       - name: logging-operator
-      #- name: pipelines-operator
+      - name: pipelines-operator
   template:
     metadata:
       name: '{{.name}}'
