@@ -32,3 +32,5 @@ spec:
         automated: {}
         syncOptions:
         - CreateNamespace=true
+        retry:
+          refresh: true
