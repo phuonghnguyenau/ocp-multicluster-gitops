@@ -12,9 +12,12 @@ The following describes what each directory is used for:
 In turn, each subdirectory in the `post-config` directory contains the following:
 * `auth` - identity, access and management configuration for the OpenShift cluster
 * `cluster-config` - general OpenShift cluster configuration
+* `cluster-observability-operator` - additional monitoring for OpenShift cluster
+* `compliance-operator` - scan OpenShift cluster against defined security profiles
 * `infra` - defining infrastructure node components
 * `logging-operator` - cluster logging
 * `oadp-operator` - OpenShift Application Data Protection operator components
+* `pipelines-operator` - Optionally add the OpenShift Pipelines/Tekton operator to cluster
 * `rhacm` - Red Hat Advanced Cluster Management for Kubernetes (RHACM), installed on an OpenShift Hub/Management cluster
 * `rhacs` - Red Hat Advanced Cluster Security for Kubernetes (RHACS), installed on an OpenShift Hub/Management cluster
 * `rhacs-secured-cluster` - Adds integration from the cluster to RHACS
