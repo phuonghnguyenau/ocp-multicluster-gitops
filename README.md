@@ -12,6 +12,8 @@ The following describes what each directory is used for:
 In turn, each subdirectory in the `post-config` directory contains the following:
 * `auth` - identity, access and management configuration for the OpenShift cluster
 * `cluster-config` - general OpenShift cluster configuration
+* `cluster-observability-operator` - additional monitoring for OpenShift cluster
+* `compliance-operator` - scan OpenShift cluster against defined security profiles
 * `infra` - defining infrastructure node components
 * `logging-operator` - cluster logging
 * `oadp-operator` - OpenShift Application Data Protection operator components
