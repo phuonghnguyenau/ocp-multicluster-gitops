@@ -16,6 +16,7 @@ spec:
       - name: rhacs
       - name: rhacs-secured-cluster
       - name: logging-operator
+      - name: compliance-operator
       #- name: pipelines-operator
   template:
     metadata:

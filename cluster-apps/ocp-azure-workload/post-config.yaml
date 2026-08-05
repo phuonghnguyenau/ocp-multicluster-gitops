@@ -14,6 +14,7 @@ spec:
       - name: auth
       - name: logging-operator
       - name: oadp-operator
+      - name: compliance-operator
   template:
     metadata:
       name: '{{.name}}'
