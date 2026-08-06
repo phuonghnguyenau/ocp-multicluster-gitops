@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-patches
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/phuonghnguyenau/ocp-multicluster-gitops.git
+    targetRevision: main
+    path: post-config/cluster-patches/overlays/ocp-azure-hub/
+  destination:
+    server: 'https://kubernetes.default.svc'
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - ServerSideApply=true
+    retry:
+      refresh: true
