@@ -47,4 +47,4 @@ echo -e "\nBootstrapping GitOps for ${CLUSTER}..."
 oc adm policy add-cluster-role-to-user -z openshift-gitops-argocd-application-controller -n openshift-gitops cluster-admin
 oc adm policy add-cluster-role-to-user -z openshift-gitops-applicationset-controller -n openshift-gitops cluster-admin
 oc adm policy add-cluster-role-to-user -z openshift-gitops-argocd-server -n openshift-gitops cluster-admin
-oc create -f cluster-apps/bootstrap-hub.yaml -n openshift-gitops
+oc create -f cluster-apps/${CLUSTER}/post-config.yaml -n openshift-gitops

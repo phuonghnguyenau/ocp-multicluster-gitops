@@ -19,6 +19,8 @@ spec:
   template:
     metadata:
       name: '{{.name}}'
+      labels:
+        apptype: post-config
     spec:
       project: "default"
       source:
