@@ -9,3 +9,9 @@ patches:
     target:
       kind: ConsoleNotification
       name: console-banner
+  - path: console-plugins-patch.yaml
+    target:
+      group: operator.openshift.io
+      version: v1
+      kind: Console
+      name: cluster

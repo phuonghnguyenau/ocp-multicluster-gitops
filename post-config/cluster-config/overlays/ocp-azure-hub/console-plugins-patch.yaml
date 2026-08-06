@@ -1,0 +1,4 @@
+---
+- op: add
+  path: /spec/plugins/-
+  value: gitops-plugin
