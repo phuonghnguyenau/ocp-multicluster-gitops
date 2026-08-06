@@ -5,3 +5,4 @@ resources:
   - etcd-encryption.yaml
   - banner.yaml
   - disable-self-provisioners.yaml
+  - console.yaml

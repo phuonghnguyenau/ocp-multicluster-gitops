@@ -1,0 +1,16 @@
+apiVersion: operator.openshift.io/v1
+kind: Console
+metadata:
+  name: cluster
+  annotations:
+    argocd.argoproj.io/sync-options: ServerSideApply=true
+spec:
+  customization:
+    addPage: {}
+    capabilities:
+      - name: LightspeedButton
+        visibility:
+          state: Disabled
+      - name: GettingStartedBanner
+        visibility:
+          state: Enabled
